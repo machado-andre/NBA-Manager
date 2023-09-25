@@ -14,6 +14,7 @@ namespace NBAManager.Classes
         private int age;
         private double overall;
         private Team team;
+        //private string position;
 
         public Player(string firstName, string lastName, int age, double overall)
         {

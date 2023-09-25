@@ -183,32 +183,10 @@ namespace NBAManager
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            if (comboBox.SelectedIndex < 0)
-                return;
-            switch(comboBox.SelectedIndex)
-            {
-                case 0:
-                    
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-            }
+            Team teamSelected = teams.ElementAt(comboBox.SelectedIndex);
+            TeamScreen teamScreen = new TeamScreen(teamSelected, players, teams);
+            this.Close();
+            teamScreen.ShowDialog();
         }
     }
 }
