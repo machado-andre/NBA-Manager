@@ -1,4 +1,5 @@
-﻿using NBAManager.Classes;
+﻿using Guna.UI2.WinForms;
+using NBAManager.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,7 @@ namespace NBAManager
             populateTeamListBoxes();
             teamSelected = _teamSelected;
             labelTeam1.Text = teamSelected.getName();
+            loadPlayerList();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -64,45 +66,35 @@ namespace NBAManager
 
         }
 
-        private void btnPG_Click(object sender, EventArgs e)
-        {
-            listBoxSelectPlayer.Visible = true;
-            loadPlayerList();
-        }
-
-        private void btnSG_Click(object sender, EventArgs e)
-        {
-            listBoxSelectPlayer.Visible = true;
-            loadPlayerList();
-        }
-
-        private void btnCenter_Click(object sender, EventArgs e)
-        {
-            listBoxSelectPlayer.Visible = true;
-            loadPlayerList();
-        }
-
-        private void btnPF_Click(object sender, EventArgs e)
-        {
-            listBoxSelectPlayer.Visible = true;
-            loadPlayerList();
-        }
-
-        private void btnSF_Click(object sender, EventArgs e)
-        {
-            listBoxSelectPlayer.Visible = true;
-            loadPlayerList();
-        }
-
         private void loadPlayerList()
         {
-            foreach(Player player in players)
+            foreach(Player player in teamSelected.getPlayers())
             {
-                if(player.getTeam() == teamSelected)
+                switch (player.getPosition())
                 {
-                    listBoxSelectPlayer.Items.Add(player);
-                }
+                    case Position.PG:
+                        comboBoxPG.Items.Add(player);
+                        break;
+                    case Position.SG:
+                        comboBoxSG.Items.Add(player);
+                        break;
+                    case Position.SF:
+                        comboBoxSF.Items.Add(player);
+                        break;
+                    case Position.PF:
+                        comboBoxPF.Items.Add(player);
+                        break;
+                    case Position.C:
+                        comboBoxCenter.Items.Add(player);
+                        break;
+                }                
             }
         }
+
+        private void generateSeasonGames()
+        {
+
+        }
+
     }
 }

@@ -15,6 +15,10 @@ namespace NBAManager
     {
         private List<Player> players = new List<Player>();
         private List<Team> teams = new List<Team>();
+        Random random = new Random();
+        //int to iterate through positions and select a position for each random crated player iteratively
+        int positionIndex = 0;
+
         public Game()
         {
             InitializeComponent();
@@ -51,44 +55,44 @@ namespace NBAManager
             #endregion
 
             #region Players
-            Player LabrounJaimes = new Player("Labroun", "Jaaimes", 37, 99);
+            Player LabrounJaimes = new Player("Labroun", "Jaaimes", 37, 99, Position.SF);
             california.addPlayer(LabrounJaimes);
             players.Add(LabrounJaimes);
             LabrounJaimes.setTeam(california);
-            Player KevinhoDurant = new Player("Kevinho", "Durant", 35, 95);
+            Player KevinhoDurant = new Player("Kevinho", "Durant", 35, 95, Position.SF);
             phoenix.addPlayer(KevinhoDurant);
             players.Add(KevinhoDurant);
             KevinhoDurant.setTeam(phoenix);
-            Player ChefCurry = new Player("Chef", "Curry", 35, 96);
+            Player ChefCurry = new Player("Chef", "Curry", 35, 96, Position.PG);
             oakland.addPlayer(ChefCurry);
             players.Add(ChefCurry);
             ChefCurry.setTeam(oakland);
-            Player RafaelRico = new Player("Rafael", "Rico", 23, 99.9);
+            Player RafaelRico = new Player("Rafael", "Rico", 23, 99.9, Position.SG);
             portland.addPlayer(RafaelRico);
             players.Add(RafaelRico);
             RafaelRico.setTeam(portland);
-            Player AndreMachado = new Player("Andre", "Machado", 22, 99.9);
+            Player AndreMachado = new Player("Andre", "Machado", 22, 99.9, Position.PG);
             oklahoma.addPlayer(AndreMachado);
             players.Add(AndreMachado);
             AndreMachado.setTeam(oklahoma);
 
-            Player TomasBalau = new Player("Tomas", "Balau", 23, 99.9);
+            Player TomasBalau = new Player("Tomas", "Balau", 23, 99.9, Position.SF);
             chicago.addPlayer(TomasBalau);
             players.Add(TomasBalau);
             TomasBalau.setTeam(chicago);
-            Player JoelCarnachide = new Player("Joel", "Carnachide", 28, 90);
+            Player JoelCarnachide = new Player("Joel", "Carnachide", 28, 90, Position.C);
             philadelphia.addPlayer(JoelCarnachide);
             players.Add(JoelCarnachide);
             JoelCarnachide.setTeam(philadelphia);
-            Player GiannisAckampumpu = new Player("Giannis", "Ackampumpu", 28, 95);
+            Player GiannisAckampumpu = new Player("Giannis", "Ackampumpu", 28, 95, Position.PF);
             milwaukee.addPlayer(GiannisAckampumpu);
             players.Add(GiannisAckampumpu);
             GiannisAckampumpu.setTeam(milwaukee);
-            Player JimmyBuckets = new Player("Jimmy", "Buckets", 32, 92);
+            Player JimmyBuckets = new Player("Jimmy", "Buckets", 32, 92, Position.SG);
             miami.addPlayer(JimmyBuckets);
             players.Add(JimmyBuckets);
             JimmyBuckets.setTeam(miami);
-            Player JaysonTaint = new Player("Jayson", "Taint", 25, 88);
+            Player JaysonTaint = new Player("Jayson", "Taint", 25, 88, Position.SF);
             boston.addPlayer(JaysonTaint);
             players.Add(JaysonTaint);
             JaysonTaint.setTeam(boston);
@@ -96,8 +100,7 @@ namespace NBAManager
 
             for (int i = 1; i <= 130; i++)
             {
-                Random random = new Random();
-                Player player = new Player("Negão", "".Insert(0, i.ToString()), 22, random.Next(68, 81));
+                Player player = new Player("Negão", "".Insert(0, i.ToString()), 22, random.Next(68, 81), returnPosition(positionIndex));
                 players.Add(player);
                 if (i < 13) { california.addPlayer(player); player.setTeam(california); continue; }
                 if (i < 26) { oakland.addPlayer(player); player.setTeam(oakland); continue; }
@@ -187,6 +190,36 @@ namespace NBAManager
             TeamScreen teamScreen = new TeamScreen(teamSelected, players, teams);
             this.Close();
             teamScreen.ShowDialog();
+        }
+
+        private Position returnPosition(int index)
+        {
+            Position position = Position.Bench;
+            switch(index)
+            {
+                case 0:
+                    index++;
+                    position = Position.PG;
+                    break;
+                case 1:
+                    index++;
+                    position = Position.SG;
+                    break;
+                case 2:
+                    index++;
+                    position = Position.SF;
+                    break;
+                case 3:
+                    index++;
+                    position = Position.PF;
+                    break;
+                case 4:
+                    index++;
+                    position = Position.C;
+                    break;
+            }
+            if(index == 4) { positionIndex = 0; }
+            return position;
         }
     }
 }

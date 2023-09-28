@@ -14,14 +14,15 @@ namespace NBAManager.Classes
         private int age;
         private double overall;
         private Team team;
-        //private string position;
+        private Position position;
 
-        public Player(string firstName, string lastName, int age, double overall)
+        public Player(string firstName, string lastName, int age, double overall, Position position)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
             this.overall = overall;
+            this.position = position;
         }
 
         public string getFirstName(){ return firstName; }
@@ -38,6 +39,10 @@ namespace NBAManager.Classes
         public Team getTeam() { return team; }
 
         public void setTeam(Team team) { this.team = team; }
+
+        public Position getPosition() { return position; }
+        
+
 
         public override string ToString()
         {
