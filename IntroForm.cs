@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace NBAManager
 {
-    public partial class Form1 : Form
+    public partial class IntroForm : Form
     {
-        public Form1()
+        public IntroForm()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
@@ -21,7 +21,8 @@ namespace NBAManager
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            Game formGame = new Game();
+            SelectionForm formGame = new SelectionForm();
+            this.Hide();
             formGame.ShowDialog();
         }
     }

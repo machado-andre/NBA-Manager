@@ -12,15 +12,16 @@ using System.Windows.Forms;
 
 namespace NBAManager
 {
-    public partial class TeamScreen : Form
+    public partial class TeamScreenForm : Form
     {
         List<Player> players = new List<Player>();
         List<Team> teams = new List<Team>();
         Team teamSelected = null;
         Season newSeason;
         public int gamesPlayed = 0;
+        List<Guna2ComboBox> comboBoxes = new List<Guna2ComboBox> ();
 
-        public TeamScreen(Team _teamSelected, List<Player> _players, List<Team> _teams)
+        public TeamScreenForm(Team _teamSelected, List<Player> _players, List<Team> _teams)
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
@@ -32,6 +33,11 @@ namespace NBAManager
             labelTeam1.Text = teamSelected.getName();
             labelTeam2.Text = teamSelected.getGame(0).getVisitorTeam().getName();
             loadPlayerList();
+            comboBoxes.Add(comboBoxPG);
+            comboBoxes.Add(comboBoxSG);
+            comboBoxes.Add(comboBoxSF);
+            comboBoxes.Add(comboBoxPF);
+            comboBoxes.Add(comboBoxCenter);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -93,6 +99,24 @@ namespace NBAManager
                         break;
                 }                
             }
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            foreach(Guna2ComboBox comboBox in comboBoxes)
+            {
+                if(comboBox.SelectedItem == null)
+                {
+                    MessageBox.Show("Please Select your starting 5.");
+                    return;
+                }
+                teamSelected.addToStartingFive((Player)comboBox.SelectedItem);
+            }
+
+            GameForm gameForm = new GameForm();
+            this.Hide();
+            this.Close();
+            gameForm.ShowDialog();
         }
     }
 }

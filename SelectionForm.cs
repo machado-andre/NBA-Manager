@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace NBAManager
 {
-    public partial class Game : Form
+    public partial class SelectionForm : Form
     {
         private List<Player> players = new List<Player>();
         private List<Team> teams = new List<Team>();
@@ -19,7 +19,7 @@ namespace NBAManager
         //int to iterate through positions and select a position for each random crated player iteratively
         int positionIndex = 0;
 
-        public Game()
+        public SelectionForm()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
@@ -187,7 +187,8 @@ namespace NBAManager
         private void btnGo_Click(object sender, EventArgs e)
         {
             Team teamSelected = teams.ElementAt(comboBox.SelectedIndex);
-            TeamScreen teamScreen = new TeamScreen(teamSelected, players, teams);
+            TeamScreenForm teamScreen = new TeamScreenForm(teamSelected, players, teams);
+            this.Hide();
             this.Close();
             teamScreen.ShowDialog();
         }
@@ -198,23 +199,23 @@ namespace NBAManager
             switch(index)
             {
                 case 0:
-                    index++;
+                    positionIndex++;
                     position = Position.PG;
                     break;
                 case 1:
-                    index++;
+                    positionIndex++;
                     position = Position.SG;
                     break;
                 case 2:
-                    index++;
+                    positionIndex++;
                     position = Position.SF;
                     break;
                 case 3:
-                    index++;
+                    positionIndex++;
                     position = Position.PF;
                     break;
                 case 4:
-                    index++;
+                    positionIndex++;
                     position = Position.C;
                     break;
             }

@@ -1,6 +1,6 @@
 ﻿namespace NBAManager
 {
-    partial class TeamScreen
+    partial class TeamScreenForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,18 +40,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxCenter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxPF = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxSF = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxSG = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.labelCenter = new System.Windows.Forms.Label();
+            this.labelPF = new System.Windows.Forms.Label();
+            this.labelSF = new System.Windows.Forms.Label();
+            this.labelSG = new System.Windows.Forms.Label();
+            this.labelPG = new System.Windows.Forms.Label();
+            this.comboBoxPG = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnPlay = new Guna.UI2.WinForms.Guna2Button();
             this.listBoxEast = new System.Windows.Forms.ListBox();
-            this.comboBoxPG = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.labelPG = new System.Windows.Forms.Label();
-            this.labelSG = new System.Windows.Forms.Label();
-            this.labelSF = new System.Windows.Forms.Label();
-            this.labelPF = new System.Windows.Forms.Label();
-            this.labelCenter = new System.Windows.Forms.Label();
-            this.comboBoxSG = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comboBoxSF = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comboBoxPF = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comboBoxCenter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -228,6 +228,131 @@
             this.panel1.Size = new System.Drawing.Size(971, 707);
             this.panel1.TabIndex = 12;
             // 
+            // comboBoxCenter
+            // 
+            this.comboBoxCenter.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxCenter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCenter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxCenter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxCenter.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxCenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxCenter.ItemHeight = 30;
+            this.comboBoxCenter.Location = new System.Drawing.Point(343, 302);
+            this.comboBoxCenter.Name = "comboBoxCenter";
+            this.comboBoxCenter.Size = new System.Drawing.Size(241, 36);
+            this.comboBoxCenter.TabIndex = 23;
+            // 
+            // comboBoxPF
+            // 
+            this.comboBoxPF.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxPF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxPF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPF.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxPF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxPF.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxPF.ItemHeight = 30;
+            this.comboBoxPF.Location = new System.Drawing.Point(343, 260);
+            this.comboBoxPF.Name = "comboBoxPF";
+            this.comboBoxPF.Size = new System.Drawing.Size(241, 36);
+            this.comboBoxPF.TabIndex = 22;
+            // 
+            // comboBoxSF
+            // 
+            this.comboBoxSF.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxSF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxSF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSF.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxSF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxSF.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxSF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxSF.ItemHeight = 30;
+            this.comboBoxSF.Location = new System.Drawing.Point(343, 218);
+            this.comboBoxSF.Name = "comboBoxSF";
+            this.comboBoxSF.Size = new System.Drawing.Size(241, 36);
+            this.comboBoxSF.TabIndex = 21;
+            // 
+            // comboBoxSG
+            // 
+            this.comboBoxSG.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxSG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxSG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxSG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxSG.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxSG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxSG.ItemHeight = 30;
+            this.comboBoxSG.Location = new System.Drawing.Point(343, 176);
+            this.comboBoxSG.Name = "comboBoxSG";
+            this.comboBoxSG.Size = new System.Drawing.Size(241, 36);
+            this.comboBoxSG.TabIndex = 20;
+            // 
+            // labelCenter
+            // 
+            this.labelCenter.AutoSize = true;
+            this.labelCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelCenter.Location = new System.Drawing.Point(320, 312);
+            this.labelCenter.Name = "labelCenter";
+            this.labelCenter.Size = new System.Drawing.Size(17, 17);
+            this.labelCenter.TabIndex = 19;
+            this.labelCenter.Text = "C";
+            // 
+            // labelPF
+            // 
+            this.labelPF.AutoSize = true;
+            this.labelPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelPF.Location = new System.Drawing.Point(312, 269);
+            this.labelPF.Name = "labelPF";
+            this.labelPF.Size = new System.Drawing.Size(25, 17);
+            this.labelPF.TabIndex = 18;
+            this.labelPF.Text = "PF";
+            // 
+            // labelSF
+            // 
+            this.labelSF.AutoSize = true;
+            this.labelSF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelSF.Location = new System.Drawing.Point(312, 228);
+            this.labelSF.Name = "labelSF";
+            this.labelSF.Size = new System.Drawing.Size(25, 17);
+            this.labelSF.TabIndex = 17;
+            this.labelSF.Text = "SF";
+            // 
+            // labelSG
+            // 
+            this.labelSG.AutoSize = true;
+            this.labelSG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelSG.Location = new System.Drawing.Point(309, 184);
+            this.labelSG.Name = "labelSG";
+            this.labelSG.Size = new System.Drawing.Size(28, 17);
+            this.labelSG.TabIndex = 16;
+            this.labelSG.Text = "SG";
+            // 
+            // labelPG
+            // 
+            this.labelPG.AutoSize = true;
+            this.labelPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelPG.Location = new System.Drawing.Point(309, 143);
+            this.labelPG.Name = "labelPG";
+            this.labelPG.Size = new System.Drawing.Size(28, 17);
+            this.labelPG.TabIndex = 15;
+            this.labelPG.Text = "PG";
+            // 
+            // comboBoxPG
+            // 
+            this.comboBoxPG.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxPG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxPG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxPG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxPG.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxPG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxPG.ItemHeight = 30;
+            this.comboBoxPG.Location = new System.Drawing.Point(343, 134);
+            this.comboBoxPG.Name = "comboBoxPG";
+            this.comboBoxPG.Size = new System.Drawing.Size(241, 36);
+            this.comboBoxPG.TabIndex = 14;
+            // 
             // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.Color.Transparent;
@@ -247,6 +372,7 @@
             this.btnPlay.Size = new System.Drawing.Size(187, 48);
             this.btnPlay.TabIndex = 13;
             this.btnPlay.Text = "Play Game";
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // listBoxEast
             // 
@@ -258,131 +384,6 @@
             this.listBoxEast.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBoxEast.Size = new System.Drawing.Size(320, 169);
             this.listBoxEast.TabIndex = 3;
-            // 
-            // comboBoxPG
-            // 
-            this.comboBoxPG.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxPG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxPG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxPG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxPG.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxPG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxPG.ItemHeight = 30;
-            this.comboBoxPG.Location = new System.Drawing.Point(343, 134);
-            this.comboBoxPG.Name = "comboBoxPG";
-            this.comboBoxPG.Size = new System.Drawing.Size(241, 36);
-            this.comboBoxPG.TabIndex = 14;
-            // 
-            // labelPG
-            // 
-            this.labelPG.AutoSize = true;
-            this.labelPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelPG.Location = new System.Drawing.Point(309, 143);
-            this.labelPG.Name = "labelPG";
-            this.labelPG.Size = new System.Drawing.Size(28, 17);
-            this.labelPG.TabIndex = 15;
-            this.labelPG.Text = "PG";
-            // 
-            // labelSG
-            // 
-            this.labelSG.AutoSize = true;
-            this.labelSG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelSG.Location = new System.Drawing.Point(309, 184);
-            this.labelSG.Name = "labelSG";
-            this.labelSG.Size = new System.Drawing.Size(28, 17);
-            this.labelSG.TabIndex = 16;
-            this.labelSG.Text = "SG";
-            // 
-            // labelSF
-            // 
-            this.labelSF.AutoSize = true;
-            this.labelSF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelSF.Location = new System.Drawing.Point(312, 228);
-            this.labelSF.Name = "labelSF";
-            this.labelSF.Size = new System.Drawing.Size(25, 17);
-            this.labelSF.TabIndex = 17;
-            this.labelSF.Text = "SF";
-            // 
-            // labelPF
-            // 
-            this.labelPF.AutoSize = true;
-            this.labelPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelPF.Location = new System.Drawing.Point(312, 269);
-            this.labelPF.Name = "labelPF";
-            this.labelPF.Size = new System.Drawing.Size(25, 17);
-            this.labelPF.TabIndex = 18;
-            this.labelPF.Text = "PF";
-            // 
-            // labelCenter
-            // 
-            this.labelCenter.AutoSize = true;
-            this.labelCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelCenter.Location = new System.Drawing.Point(320, 312);
-            this.labelCenter.Name = "labelCenter";
-            this.labelCenter.Size = new System.Drawing.Size(17, 17);
-            this.labelCenter.TabIndex = 19;
-            this.labelCenter.Text = "C";
-            // 
-            // comboBoxSG
-            // 
-            this.comboBoxSG.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxSG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxSG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxSG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxSG.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxSG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxSG.ItemHeight = 30;
-            this.comboBoxSG.Location = new System.Drawing.Point(343, 176);
-            this.comboBoxSG.Name = "comboBoxSG";
-            this.comboBoxSG.Size = new System.Drawing.Size(241, 36);
-            this.comboBoxSG.TabIndex = 20;
-            // 
-            // comboBoxSF
-            // 
-            this.comboBoxSF.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxSF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxSF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSF.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxSF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxSF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxSF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxSF.ItemHeight = 30;
-            this.comboBoxSF.Location = new System.Drawing.Point(343, 218);
-            this.comboBoxSF.Name = "comboBoxSF";
-            this.comboBoxSF.Size = new System.Drawing.Size(241, 36);
-            this.comboBoxSF.TabIndex = 21;
-            // 
-            // comboBoxPF
-            // 
-            this.comboBoxPF.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxPF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxPF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPF.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxPF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxPF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxPF.ItemHeight = 30;
-            this.comboBoxPF.Location = new System.Drawing.Point(343, 260);
-            this.comboBoxPF.Name = "comboBoxPF";
-            this.comboBoxPF.Size = new System.Drawing.Size(241, 36);
-            this.comboBoxPF.TabIndex = 22;
-            // 
-            // comboBoxCenter
-            // 
-            this.comboBoxCenter.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxCenter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCenter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxCenter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxCenter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxCenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxCenter.ItemHeight = 30;
-            this.comboBoxCenter.Location = new System.Drawing.Point(343, 302);
-            this.comboBoxCenter.Name = "comboBoxCenter";
-            this.comboBoxCenter.Size = new System.Drawing.Size(241, 36);
-            this.comboBoxCenter.TabIndex = 23;
             // 
             // TeamScreen
             // 

@@ -12,6 +12,7 @@ namespace NBAManager.Classes
         private double offensiveRating = 0;
         private double defensiveRating = 0;
         private List<Player> players;
+        private List<Player> starting5;
         private string location;
         private short wins, losses;
         private int gameScore;
@@ -24,6 +25,8 @@ namespace NBAManager.Classes
             this.wins = 0;
             this.losses = 0;
             players = new List<Player>();
+            games = new List<Game>();
+            starting5 = new List<Player>();
         }
 
         public string getName() { return this.name; }
@@ -66,6 +69,12 @@ namespace NBAManager.Classes
         public Game getGame(int index) { return this.games.ElementAt(index); }
 
         public void addGame(Game game) { games.Add(game); }
+
+        public List<Player> getStartingFive() { return starting5; }
+
+        public void addToStartingFive(Player player) { starting5.Add(player); }
+
+        public Player removeFromStartingFive(Player player) { starting5.Remove(player); return player; }
 
         public override string ToString()
         {

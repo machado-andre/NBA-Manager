@@ -1,6 +1,6 @@
 ﻿namespace NBAManager
 {
-    partial class Form1
+    partial class IntroForm
     {
         /// <summary>
         /// Required designer variable.

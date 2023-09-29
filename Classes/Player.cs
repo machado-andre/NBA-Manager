@@ -56,7 +56,7 @@ namespace NBAManager.Classes
 
         public override string ToString()
         {
-            return getFirstName() + " " + getLastName() + ", " + getAge().ToString() + " years old.";
+            return getFirstName() + " " + getLastName() + ", " + getAge().ToString() + "y "+getOverall()+" Overall";
         }
     }
 }

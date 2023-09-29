@@ -1,6 +1,6 @@
 ﻿namespace NBAManager
 {
-    partial class Game
+    partial class SelectionForm
     {
         /// <summary>
         /// Required designer variable.
