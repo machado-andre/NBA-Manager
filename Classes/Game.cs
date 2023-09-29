@@ -25,6 +25,7 @@ namespace NBAManager.Classes
 
         public Team getVisitorTeam() {  return visitorTeam;}
 
+
         private void teamScores(Team attackingTeam, Team defendingTeam)
         {
             double offenseRating = attackingTeam.getOffensiveRating();

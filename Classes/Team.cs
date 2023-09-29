@@ -76,6 +76,8 @@ namespace NBAManager.Classes
 
         public Player removeFromStartingFive(Player player) { starting5.Remove(player); return player; }
 
+        public Game removeGameToBePlayed(Game game) { games.Remove(game); return game; }
+
         public override string ToString()
         {
             return this.name + "\t\t" + this.wins + "\t\t" + this.losses + "\t\t." + calcWinPercentage();

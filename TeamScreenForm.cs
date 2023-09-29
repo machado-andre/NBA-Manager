@@ -17,7 +17,7 @@ namespace NBAManager
         List<Player> players = new List<Player>();
         List<Team> teams = new List<Team>();
         Team teamSelected = null;
-        Season newSeason;
+        Season season;
         public int gamesPlayed = 0;
         List<Guna2ComboBox> comboBoxes = new List<Guna2ComboBox> ();
 
@@ -27,7 +27,7 @@ namespace NBAManager
             WindowState = FormWindowState.Maximized;
             players = _players;
             teams = _teams;
-            newSeason = new Season(teams);
+            season = new Season(teams);
             populateTeamListBoxes();
             teamSelected = _teamSelected;
             labelTeam1.Text = teamSelected.getName();
@@ -113,7 +113,8 @@ namespace NBAManager
                 teamSelected.addToStartingFive((Player)comboBox.SelectedItem);
             }
 
-            GameForm gameForm = new GameForm();
+            GameForm gameForm = new GameForm(teamSelected, teamSelected.getGame(0), season);
+            
             this.Hide();
             this.Close();
             gameForm.ShowDialog();
