@@ -12,16 +12,19 @@ namespace NBAManager.Classes
         private string firstName;
         private string lastName;
         private int age;
+        private double offense;
+        private double defense;
         private double overall;
         private Team team;
         private Position position;
 
-        public Player(string firstName, string lastName, int age, double overall, Position position)
+        public Player(string firstName, string lastName, int age, double offense, double defense, Position position)
         {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
-            this.overall = overall;
+            this.offense = offense;
+            this.defense = defense;
             this.position = position;
         }
 
@@ -33,8 +36,15 @@ namespace NBAManager.Classes
 
         public int getAge() { return age; }
 
-        public double getOverall() {  return overall; }
-        public void setOverall(double overall) { this.overall = overall; }
+        public double getOverall() {  return ((this.offense+this.defense)/2) + 1; }
+
+        public double getDefense() { return this.defense; }
+
+        public void setDefense(double defense) { this.defense = defense; }
+
+        public double getOffense() { return this.offense; }
+
+        public void setOffense(double offense) { this.offense = offense; }
 
         public Team getTeam() { return team; }
 

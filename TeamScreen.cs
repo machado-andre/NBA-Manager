@@ -17,6 +17,8 @@ namespace NBAManager
         List<Player> players = new List<Player>();
         List<Team> teams = new List<Team>();
         Team teamSelected = null;
+        Season newSeason;
+        public int gamesPlayed = 0;
 
         public TeamScreen(Team _teamSelected, List<Player> _players, List<Team> _teams)
         {
@@ -24,9 +26,11 @@ namespace NBAManager
             WindowState = FormWindowState.Maximized;
             players = _players;
             teams = _teams;
+            newSeason = new Season(teams);
             populateTeamListBoxes();
             teamSelected = _teamSelected;
             labelTeam1.Text = teamSelected.getName();
+            labelTeam2.Text = teamSelected.getGame(0).getVisitorTeam().getName();
             loadPlayerList();
         }
 
@@ -90,11 +94,5 @@ namespace NBAManager
                 }                
             }
         }
-
-        private void generateSeasonGames()
-        {
-
-        }
-
     }
 }

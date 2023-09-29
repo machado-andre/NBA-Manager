@@ -55,44 +55,44 @@ namespace NBAManager
             #endregion
 
             #region Players
-            Player LabrounJaimes = new Player("Labroun", "Jaaimes", 37, 99, Position.SF);
+            Player LabrounJaimes = new Player("Labroun", "Jaaimes", 37, 99, 99, Position.SF);
             california.addPlayer(LabrounJaimes);
             players.Add(LabrounJaimes);
             LabrounJaimes.setTeam(california);
-            Player KevinhoDurant = new Player("Kevinho", "Durant", 35, 95, Position.SF);
+            Player KevinhoDurant = new Player("Kevinho", "Durant", 35, 95, 88, Position.SF);
             phoenix.addPlayer(KevinhoDurant);
             players.Add(KevinhoDurant);
             KevinhoDurant.setTeam(phoenix);
-            Player ChefCurry = new Player("Chef", "Curry", 35, 96, Position.PG);
+            Player ChefCurry = new Player("Chef", "Curry", 35, 96, 85, Position.PG);
             oakland.addPlayer(ChefCurry);
             players.Add(ChefCurry);
             ChefCurry.setTeam(oakland);
-            Player RafaelRico = new Player("Rafael", "Rico", 23, 99.9, Position.SG);
+            Player RafaelRico = new Player("Rafael", "Rico", 23, 99, 99, Position.SG);
             portland.addPlayer(RafaelRico);
             players.Add(RafaelRico);
             RafaelRico.setTeam(portland);
-            Player AndreMachado = new Player("Andre", "Machado", 22, 99.9, Position.PG);
+            Player AndreMachado = new Player("Andre", "Machado", 22, 99, 99, Position.PG);
             oklahoma.addPlayer(AndreMachado);
             players.Add(AndreMachado);
             AndreMachado.setTeam(oklahoma);
 
-            Player TomasBalau = new Player("Tomas", "Balau", 23, 99.9, Position.SF);
+            Player TomasBalau = new Player("Tomas", "Balau", 23, 99, 99, Position.SF);
             chicago.addPlayer(TomasBalau);
             players.Add(TomasBalau);
             TomasBalau.setTeam(chicago);
-            Player JoelCarnachide = new Player("Joel", "Carnachide", 28, 90, Position.C);
+            Player JoelCarnachide = new Player("Joel", "Carnachide", 28, 95, 90, Position.C);
             philadelphia.addPlayer(JoelCarnachide);
             players.Add(JoelCarnachide);
             JoelCarnachide.setTeam(philadelphia);
-            Player GiannisAckampumpu = new Player("Giannis", "Ackampumpu", 28, 95, Position.PF);
+            Player GiannisAckampumpu = new Player("Giannis", "Ackampumpu", 28, 95, 95, Position.PF);
             milwaukee.addPlayer(GiannisAckampumpu);
             players.Add(GiannisAckampumpu);
             GiannisAckampumpu.setTeam(milwaukee);
-            Player JimmyBuckets = new Player("Jimmy", "Buckets", 32, 92, Position.SG);
+            Player JimmyBuckets = new Player("Jimmy", "Buckets", 32, 92, 90, Position.SG);
             miami.addPlayer(JimmyBuckets);
             players.Add(JimmyBuckets);
             JimmyBuckets.setTeam(miami);
-            Player JaysonTaint = new Player("Jayson", "Taint", 25, 88, Position.SF);
+            Player JaysonTaint = new Player("Jayson", "Taint", 25, 88, 85, Position.SF);
             boston.addPlayer(JaysonTaint);
             players.Add(JaysonTaint);
             JaysonTaint.setTeam(boston);
@@ -100,7 +100,7 @@ namespace NBAManager
 
             for (int i = 1; i <= 130; i++)
             {
-                Player player = new Player("Negão", "".Insert(0, i.ToString()), 22, random.Next(68, 81), returnPosition(positionIndex));
+                Player player = new Player("Negão", "".Insert(0, i.ToString()), 22, random.Next(68, 81), random.Next(68, 81), returnPosition(positionIndex));
                 players.Add(player);
                 if (i < 13) { california.addPlayer(player); player.setTeam(california); continue; }
                 if (i < 26) { oakland.addPlayer(player); player.setTeam(oakland); continue; }
