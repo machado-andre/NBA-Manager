@@ -18,10 +18,7 @@ C:\Users\amachado\Documents\GitHub\NBA-Manager\bin\Debug\NBAManager.pdb
 C:\Users\amachado\Documents\GitHub\NBA-Manager\bin\Debug\Guna.UI2.dll
 C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.csproj.AssemblyReference.cache
 C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.csproj.SuggestedBindingRedirects.cache
-C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.Form1.resources
-C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.Game.resources
 C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.Properties.Resources.resources
-C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.TeamScreen.resources
 C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.csproj.GenerateResource.cache
 C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.csproj.CoreCompileInputs.cache
 C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.csproj.CopyComplete
@@ -42,3 +39,7 @@ C:\Users\andre\source\repos\NBA-Manager\obj\Debug\NBAManager.pdb
 C:\Users\andre\source\repos\NBA-Manager\obj\Debug\NBAManager.IntroForm.resources
 C:\Users\andre\source\repos\NBA-Manager\obj\Debug\NBAManager.SelectionForm.resources
 C:\Users\andre\source\repos\NBA-Manager\obj\Debug\NBAManager.TeamScreenForm.resources
+C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.GameForm.resources
+C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.IntroForm.resources
+C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.SelectionForm.resources
+C:\Users\amachado\Documents\GitHub\NBA-Manager\obj\Debug\NBAManager.TeamScreenForm.resources

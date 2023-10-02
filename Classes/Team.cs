@@ -15,7 +15,7 @@ namespace NBAManager.Classes
         private List<Player> starting5;
         private string location;
         private short wins, losses;
-        private int gameScore;
+        private int gameScore = 0;
         private List<Game> games;
 
         public Team(string name, string location)
@@ -33,6 +33,7 @@ namespace NBAManager.Classes
 
         public double getOffensiveRating()
         {
+            offensiveRating = 0;
             foreach(Player player in players)
             {
                 offensiveRating += player.getOffense();
@@ -41,6 +42,7 @@ namespace NBAManager.Classes
         }
         public double getDefensiveRating()
         {
+            defensiveRating = 0;
             foreach (Player player in players)
             {
                 defensiveRating += player.getDefense();
@@ -81,6 +83,20 @@ namespace NBAManager.Classes
         public override string ToString()
         {
             return this.name + "\t\t" + this.wins + "\t\t" + this.losses + "\t\t." + calcWinPercentage();
+        }
+
+        public List<Player> getPlayersByPosition(Position position)
+        {
+            List<Player> playersFromPosition = new List<Player>();
+            foreach (Player player in players)
+            {
+                if(player.getPosition() == position)
+                {
+                    playersFromPosition.Add(player);
+                }
+            }
+
+            return playersFromPosition;
         }
 
         private float calcWinPercentage()
